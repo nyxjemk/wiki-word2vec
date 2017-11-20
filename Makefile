@@ -7,10 +7,10 @@ CORPUSNAME := wiki.$(LANGUAGE).text
 MODELPATH := $(DATADIR)model_$(LANGUAGE).word2vec
 
 $(MODELPATH): $(DATADIR)$(CORPUSNAME)
-	python create_word2vec.py $(DATADIR)$(CORPUSNAME) $(MODELPATH)
+	python3 create_word2vec.py $(DATADIR)$(CORPUSNAME) $(MODELPATH)
 
 $(DATADIR)$(CORPUSNAME): $(DATADIR)$(XMLNAME)
-	python process_wiki.py $(DATADIR)$(XMLNAME) $(DATADIR)$(CORPUSNAME)
+	python3 process_wiki.py $(DATADIR)$(XMLNAME) $(DATADIR)$(CORPUSNAME)
 
 $(DATADIR)$(XMLNAME):
 	mkdir -p $(DATADIR)
