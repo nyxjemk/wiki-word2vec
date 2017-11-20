@@ -40,7 +40,7 @@ if __name__ == '__main__':
         'size': 400,
         'window': 10,
         'min_count': 10,
-        'workers': max(1, multiprocessing.cpu_count() - 1),
+        'workers': max(1, multiprocessing.cpu_count() - 2),
         'sample': 1E-5,
         }
 
