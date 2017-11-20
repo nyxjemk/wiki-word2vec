@@ -43,7 +43,7 @@ if __name__ == '__main__':
         'workers': max(1, multiprocessing.cpu_count() - 2),
         'sample': 1E-5,
         }
-
+    print('Using {} workers for processing.'.format(params['workers']))
     word2vec = Word2Vec(LineSentence(inp, max_sentence_length=max_length),
                         **params)
     word2vec.save(outp)
