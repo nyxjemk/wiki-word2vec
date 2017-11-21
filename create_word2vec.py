@@ -38,8 +38,8 @@ if __name__ == '__main__':
 
     params = {
         'size': 150,
-        'window': 5,
-        'min_count': 7,
+        'window': 10,
+        'min_count': 10,
         'workers': max(1, multiprocessing.cpu_count() - 3),
         'sample': 1E-5,
         }
