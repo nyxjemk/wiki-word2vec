@@ -37,13 +37,13 @@ if __name__ == '__main__':
     logger.info("Max article length: {} words.".format(max_length))
 
     params = {
-        'size': 400,
-        'window': 10,
-        'min_count': 10,
-        'workers': max(1, multiprocessing.cpu_count() - 2),
+        'size': 150,
+        'window': 5,
+        'min_count': 7,
+        'workers': max(1, multiprocessing.cpu_count() - 3),
         'sample': 1E-5,
         }
-    print('Using {} workers for processing.'.format(params['workers']))
+    logger.info('Number of workers: {}'.format(params['workers']))
     word2vec = Word2Vec(LineSentence(inp, max_sentence_length=max_length),
                         **params)
     word2vec.save(outp)
