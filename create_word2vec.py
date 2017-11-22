@@ -37,7 +37,7 @@ if __name__ == '__main__':
     logger.info("Max article length: {} words.".format(max_length))
 
     params = {
-        'size': 400,
+        'size': 250,
         'window': 10,
         'min_count': 10,
         'workers': max(1, multiprocessing.cpu_count() - 3),
